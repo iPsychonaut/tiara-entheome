@@ -7,9 +7,9 @@ with open("requirements.txt") as fh:
     requirements = fh.readlines()
 
 setuptools.setup(
-    name="tiara",
-    version="1.0.3",
-    description="A tool for classifying metagenomic data",
+    name="tiara-entheome",
+    version="1",
+    description="A tool for classifying metagenomic data, adapted for use with the Entheome Genome Assembly Pipeline (EGAP)",
     author="Michał Karlicki and Stanisław Antonowicz",
     author_email="stas.antonowicz@gmail.com",
     long_description=long_description,
