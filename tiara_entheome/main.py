@@ -68,8 +68,8 @@ def main(test=None):
 
         import torch
 
-        from tiara.src.classification import Classification
-        from tiara.src.utilities import sort_type, write_to_fasta
+        from tiara_entheome.src.classification import Classification
+        from tiara_entheome.src.utilities import sort_type, write_to_fasta
 
         torch.set_num_threads(args.threads)
 
@@ -215,7 +215,7 @@ def perform_test():
 
     import torch
 
-    from tiara.src.classification import Classification
+    from tiara_entheome.src.classification import Classification
 
     nnet_weights = [
         pkg_resources.resource_filename(__name__, "models/nnet-models/" + path)

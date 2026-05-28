@@ -8,8 +8,8 @@ import numpy as np
 from numba.typed import List as NumbaList
 from Bio.SeqIO.FastaIO import SimpleFastaParser
 
-from tiara.src.utilities import chop, count_sequences
-from tiara.src.bow import single_oligofreq, multiple_oligofreq
+from tiara_entheome.src.utilities import chop, count_sequences
+from tiara_entheome.src.bow import single_oligofreq, multiple_oligofreq
 
 
 class TfidfWeighter:

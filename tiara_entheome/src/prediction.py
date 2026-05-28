@@ -4,7 +4,7 @@ import warnings
 from skorch import NeuralNetClassifier
 import numpy as np
 
-from tiara.src.utilities import chop, SingleResult
+from tiara_entheome.src.utilities import chop, SingleResult
 
 
 classes_mapping = {

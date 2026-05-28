@@ -1,29 +1,5 @@
-import setuptools
+from setuptools import setup
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
-
-with open("requirements.txt") as fh:
-    requirements = fh.readlines()
-
-setuptools.setup(
-    name="tiara-entheome",
-    version="1",
-    description="A tool for classifying metagenomic data, adapted for use with the Entheome Genome Assembly Pipeline (EGAP)",
-    author="Michał Karlicki and Stanisław Antonowicz",
-    author_email="stas.antonowicz@gmail.com",
-    long_description=long_description,
-    long_description_content_type="text/markdown",
-    url="https://ibe-uw.github.io/tiara/",
-    packages=setuptools.find_packages(),
-    classifiers=[
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
-    ],
-    python_requires=">=3.7,<3.10",
-    keywords="machine-learning computational-biology",
-    install_requires=requirements,
-)
+# All package metadata lives in pyproject.toml (PEP 621). This shim exists only
+# so that legacy tooling and editable installs that expect a setup.py keep working.
+setup()
