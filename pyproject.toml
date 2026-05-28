@@ -1,10 +1,10 @@
 [project]
-name = "tiara"
-version = "1.0.3"
+name = "tiara-entheome"
+version = "1"
 authors = [
-  { name="Michał Karlicki" }, { name="Stanisław Antonowicz", email="stas.antonowicz@gmail.com" }
+  { name="Michał Karlicki" }, { name="Stanisław Antonowicz", email="stas.antonowicz@gmail.com" }, { name="Ian M Bollinger", email="ian.michael.bollinger@gmail.com" }
 ]
-description = "A tool for classifying metagenomic data"
+description = "A tool for classifying metagenomic data, adapated for use with the Entheome Genome Assembly Pipeline (EGAP)"
 readme = "README.md"
 requires-python = ">=3.7,<3.10"
 classifiers = [
@@ -16,20 +16,20 @@ keywords = ["machine-learning", "computational-biology"]
 dependencies = [
     "biopython~=1.78",
     "joblib~=0.17.0",
-    "numba>=0.52.0rc3",
-    "numpy~=1.19.4",
+    "numba>=0.52.0rc3", #TODO: NEEDS UPDATING FOR EGAP
+    "numpy~=1.19.4", #TODO: NEEDS UPDATING FOR EGAP
     "skorch~=0.9.0",
     "torch~=1.7.0",
     "tqdm~=4.54.0"
 ]
 
 [project.scripts]
-tiara = "tiara.main:main"
-tiara-test = "tiara.test.test:test"
+tiara-entheome = "tiara.entheome.main:main"
+tiara-entheome-test = "tiara.entheome.test.test:test"
 
 [project.urls]
 "Homepage" = "https://ibe-uw.github.io/tiara/"
-"Bug Tracker" = "https://github.com/ibe-uw/tiara/issues"
+"Bug Tracker" = "https://github.com/iPsychonaut/tiara-entheome/issues"
 
 [build-system]
 requires = ["setuptools>=61.0"]
