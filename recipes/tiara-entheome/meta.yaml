@@ -16,8 +16,6 @@ build:
   entry_points:
     - tiara-entheome = tiara_entheome.main:main
     - tiara-entheome-test = tiara_entheome.test.test:test
-  run_exports:
-    - {{ pin_subpackage(name, max_pin="x") }}
 
 requirements:
   host:
