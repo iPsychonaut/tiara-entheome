@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/iPsychonaut/tiara-entheome/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: PLACEHOLDER_FILL_AFTER_RELEASE
+  sha256: a5fe19d4d77eda6fd6608cce25b1a70a06a999fae7d35e98bb1b5a96ae228dee
 
 build:
   noarch: python
