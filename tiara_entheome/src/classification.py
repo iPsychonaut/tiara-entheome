@@ -10,10 +10,10 @@ from joblib import Parallel, delayed
 from skorch import NeuralNetClassifier
 import torch
 
-from tiara.src.prediction import Prediction, SingleResult
-from tiara.src.models import NNet1, NNet2
-from tiara.src.transformations import Transformer, TfidfWeighter
-from tiara.src.utilities import parse_params, chop, time_context_manager
+from tiara_entheome.src.prediction import Prediction, SingleResult
+from tiara_entheome.src.models import NNet1, NNet2
+from tiara_entheome.src.transformations import Transformer, TfidfWeighter
+from tiara_entheome.src.utilities import parse_params, chop, time_context_manager
 
 
 def fun(seq, layer, transformer, fragment_len):

@@ -17,8 +17,8 @@ from Bio.SeqIO.FastaIO import SimpleFastaParser
 from numba import njit
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 
-from tiara.src.transformations import TfidfWeighter
-from tiara.src.transformations import Transformer
+from tiara_entheome.src.transformations import TfidfWeighter
+from tiara_entheome.src.transformations import Transformer
 
 torch.set_num_threads(int(sys.argv[4]))
 

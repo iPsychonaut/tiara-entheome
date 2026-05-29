@@ -1,7 +1,7 @@
 import os
 import sys
 
-from tiara.src.transformations import TfidfWeighter
+from tiara_entheome.src.transformations import TfidfWeighter
 
 # replace with your real data
 DATA_PREFIX = sys.argv[1]

@@ -11,8 +11,8 @@ from torch import nn
 from Bio.SeqIO.FastaIO import SimpleFastaParser
 from numba import njit
 
-from tiara.src.transformations import TfidfWeighter
-from tiara.src.transformations import Transformer
+from tiara_entheome.src.transformations import TfidfWeighter
+from tiara_entheome.src.transformations import Transformer
 
 
 # replace with your real data

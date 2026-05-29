@@ -1,7 +1,7 @@
-biopython~=1.78
-joblib~=0.17.0
-numba>=0.52.0rc3 #TODO: NEEDS UPDATING FOR EGAP
-numpy~=1.19.4 #TODO: NEEDS UPDATING FOR EGAP
-skorch~=0.9.0
-torch~=1.7.0
-tqdm~=4.54.0
+biopython
+joblib
+numba>=0.56
+numpy>=1.21
+skorch>=0.11
+torch>=1.10,<3
+tqdm
