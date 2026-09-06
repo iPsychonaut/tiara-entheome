@@ -1,6 +1,6 @@
 [project]
 name = "tiara-entheome"
-version = "1.0.0"
+version = "1.0.1"
 authors = [
   { name="Ian M Bollinger", email="ian.michael.bollinger@gmail.com" },
 ]
@@ -53,5 +53,6 @@ tiara_entheome = [
     "models/nnet-models/*",
     "models/tfidf-models/*",
     "models/tfidf-models/*/*",
-    "test/test_data/*",
+    "test/test_data/*.fasta.gz",
+    "test/test_data/*_out.txt",
 ]

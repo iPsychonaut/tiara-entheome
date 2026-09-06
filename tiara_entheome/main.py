@@ -2,6 +2,17 @@ import argparse
 import sys
 from collections import Counter
 import gzip
+import os
+
+
+def _resource_path(relative_path):
+    """Absolute path to a file bundled inside the tiara_entheome package.
+
+    Replaces pkg_resources.resource_filename(): pkg_resources was removed from
+    setuptools in v82 (2026), so relying on it made the package fail at runtime
+    in any environment with a current setuptools.
+    """
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_path)
 
 
 minimum_sequence_length = 3000
@@ -62,7 +73,6 @@ def main(test=None):
         perform_test()
     else:
         args = parse_arguments()
-        import pkg_resources
         import os
         import time
 
@@ -93,14 +103,14 @@ def main(test=None):
 
         params = [first_stage_model_params, second_stage_model_params]
         nnet_weights = [
-            pkg_resources.resource_filename(__name__, "models/nnet-models/" + path)
+            _resource_path("models/nnet-models/" + path)
             for path in [
                 first_stage_model_params["fname"],
                 second_stage_model_params["fname"],
             ]
         ]
         tfidfs = [
-            pkg_resources.resource_filename(__name__, "models/tfidf-models/" + path)
+            _resource_path("models/tfidf-models/" + path)
             for path in [first_stage_tfidf_fname, second_stage_tfidf_fname]
         ]
 
@@ -210,7 +220,6 @@ def prepare_statistics(results):
 
 
 def perform_test():
-    import pkg_resources
     import time
 
     import torch
@@ -218,14 +227,14 @@ def perform_test():
     from tiara_entheome.src.classification import Classification
 
     nnet_weights = [
-        pkg_resources.resource_filename(__name__, "models/nnet-models/" + path)
+        _resource_path("models/nnet-models/" + path)
         for path in [
             "first_nnet_kmer_6.pkl",
             "second_nnet_kmer_7.pkl",
         ]
     ]
     tfidfs = [
-        pkg_resources.resource_filename(__name__, "models/tfidf-models/" + path)
+        _resource_path("models/tfidf-models/" + path)
         for path in [
             "k6-first-stage",
             "k7-second-stage",
@@ -255,12 +264,8 @@ def perform_test():
         ["archaea", "bacteria", "eukarya", "mitochondria", "plast"]
     ):
         print(f"Testing file {i + 1}/5: {source_dataset + '_fr.fasta.gz'}")
-        fasta_fpath = pkg_resources.resource_filename(
-            __name__, data_template + source_dataset + "_fr.fasta.gz"
-        )
-        target_output_fpath = pkg_resources.resource_filename(
-            __name__, data_template + source_dataset + "_out.txt"
-        )
+        fasta_fpath = _resource_path(data_template + source_dataset + "_fr.fasta.gz")
+        target_output_fpath = _resource_path(data_template + source_dataset + "_out.txt")
         start_time = time.time()
         results = classifier.classify(fasta_fpath, verbose=True)
         end_time = time.time()

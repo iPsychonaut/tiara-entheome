@@ -16,7 +16,7 @@ The full original upstream README is preserved in [README_UPSTREAM.md](README_UP
 
 ## What changed versus upstream
 
-| | upstream `tiara` 1.0.3 | `tiara-entheome` 1.0.0 |
+| | upstream `tiara` 1.0.3 | `tiara-entheome` 1.0.1 |
 | --- | --- | --- |
 | numpy | `==1.19.2` | `>=1.21` |
 | numba | `==0.52.0` | `>=0.56` |
