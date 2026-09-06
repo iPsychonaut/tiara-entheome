@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/iPsychonaut/tiara-entheome/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: PLACEHOLDER_FILL_AFTER_TAGGING_v1.0.1
+  sha256: c551ad41b80159352a003178cfc3138dea0be43e1145443d3f15ae4f76e62632
 
 build:
   noarch: python
